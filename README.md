@@ -9,7 +9,6 @@ Inside each module, a folder for each day of the module will be created. Inside 
 * **tutorial:** Any code or documentation needed for the student to follow along with the tutorial
 * **tutorial-final:** The final solution for the tutorial
 * **exercise:** The starting code and documentation for the student exercises
-* **exercise-final:** The final solution for the exercise that the students will go through
 
 ## Module 1: Intro to Programming
 
@@ -47,7 +46,7 @@ The table below lists the Topics for each day as well as the Sections and Units 
             <td rowspan="5">Week 1<br><small>January 17</small></td>
             <td>Day 1</td>
             <td>Introduction to Tools</td>
-            <td>Intro to Tools - Student guide<br/>Intro to Tools -File system and command line<br/>Intro to Tools - Git</td>
+            <td>Intro to Tools - Student guide<br/>Intro to Tools - How do I...?<br/>Intro to Tools - File system and command line<br/>Intro to Tools - Git</td>
         </tr>
         <tr>
             <td>Day 2</td>
