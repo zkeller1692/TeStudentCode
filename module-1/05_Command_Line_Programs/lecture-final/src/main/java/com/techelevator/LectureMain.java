@@ -58,6 +58,6 @@ public class LectureMain {
             result = Integer.toString(x) + result;
         }
 
-        System.out.println(result);
+        System.out.print(result);
     }
 }
