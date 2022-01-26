@@ -3,6 +3,7 @@ package com.techelevator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.DoubleUnaryOperator;
 
 public class Exercises {
 
@@ -19,8 +20,8 @@ public class Exercises {
     public List<String> array2List(String[] stringArray) {
         List<String> answers = new ArrayList<>();
         for (int i = 0; i < stringArray.length; i++) {
-           String x = stringArray[i];
-           answers.add(x);
+            String x = stringArray[i];
+            answers.add(x);
         }
         return answers;
     }
@@ -44,9 +45,9 @@ public class Exercises {
      no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
      */
     public List<String> no4LetterWords(String[] stringArray) {
-        List<String> answer= new ArrayList<>();
-        for (String words: stringArray){
-            if (words.length() != 4 ){
+        List<String> answer = new ArrayList<>();
+        for (String words : stringArray) {
+            if (words.length() != 4) {
                 answer.add(words);
             }
         }
@@ -60,10 +61,11 @@ public class Exercises {
      arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
      */
     public List<Double> arrayInt2ListDouble(int[] intArray) {
-        List<Double> Answer= new ArrayList<>();
-
-
-        return null;
+        List<Double> answer = new ArrayList<>();
+        for (int divideAnswer : intArray) {
+            answer.add(divideAnswer / 2.0);
+        }
+        return answer;
     }
 
     /*
@@ -85,11 +87,11 @@ public class Exercises {
      */
     public List<Integer> oddOnly(Integer[] integerArray) {
         List<Integer> answers = new ArrayList<>();
-      for ( int isOdd : integerArray){
-          if (isOdd % 2 == 1){
-              answers.add(isOdd);
-          }
-      }
+        for (int isOdd : integerArray) {
+            if (isOdd % 2 == 1) {
+                answers.add(isOdd);
+            }
+        }
         return answers;
     }
 
@@ -101,6 +103,16 @@ public class Exercises {
      foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
      */
     public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
+        int count = 0;
+
+        for (Integer findTwice : integerList) {
+            if (intToFind == findTwice) {
+                count = count + 1;
+            }
+        }
+        if (count == 2) {
+            return true;
+        }
         return false;
     }
 
@@ -117,8 +129,26 @@ public class Exercises {
     HINT: To convert an Integer x to a String, you can use x.toString() in your code. For example, if x = 1, then x.toString() returns "1."
      */
     public List<String> fizzBuzzList(Integer[] integerArray) {
-        return null;
+        List<String> answers = new ArrayList<>();
+
+        for (Integer nums : integerArray) {
+            if (nums % 3 == 0 && nums % 5 == 0) {
+                answers.add ("FizzBuzz");
+            }
+            else if (nums % 3 == 0) {
+                answers.add("Fizz");
+            }
+            else if (nums % 5 == 0) {
+                answers.add("Buzz");
+            }else
+                answers.add(nums.toString());
+        }
+        return answers;
     }
+
+
+
+
 
     /*
      Given two lists of Integers, interleave them beginning with the first element in the first list followed
@@ -128,7 +158,17 @@ public class Exercises {
      interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
      */
     public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
-        return null;
+        List<Integer> answerList = new ArrayList<Integer>();
+
+        for (int i = 0; i < Math.max(listOne.size(), listTwo.size()); i++) {
+            if ( i < listOne.size()){
+                answerList.add(listOne.get(i));
+            }
+            if ( i < listTwo.size()){
+                answerList.add(listTwo.get(i));
+            }
+        }
+        return answerList;
     }
 
 }
