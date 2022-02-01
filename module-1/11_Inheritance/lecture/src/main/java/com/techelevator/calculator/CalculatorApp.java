@@ -14,19 +14,32 @@ public class CalculatorApp {
 
         Scanner userInputScanner = new Scanner(System.in);
 
-        System.out.println("Please enter the first number to add: ");
-        String firstValueStr = userInputScanner.nextLine();
-        int firstValue = Integer.parseInt(firstValueStr);
-        System.out.println("You entered " + firstValue);
-        System.out.println();
+//        System.out.println("Please enter the first number to add: ");
+//        String firstValueStr = userInputScanner.nextLine();
+//        int firstValue = Integer.parseInt(firstValueStr);
+//        System.out.println("You entered " + firstValue);
+//        System.out.println();
+//
+//        System.out.println("Please enter the second number to add: ");
+//        String secondValueStr = userInputScanner.nextLine();
+//        int secondValue = Integer.parseInt(secondValueStr);
+//        System.out.println("You entered " + secondValue);
+//        System.out.println();
 
-        System.out.println("Please enter the second number to add: ");
-        String secondValueStr = userInputScanner.nextLine();
-        int secondValue = Integer.parseInt(secondValueStr);
-        System.out.println("You entered " + secondValue);
-        System.out.println();
+        int firstValue = this.getIntFromUser("Please enter first value: ", userInputScanner);
+        int secondValue = this.getIntFromUser("Please enter second value: ", userInputScanner);
 
         int result = firstValue + secondValue;
         System.out.println(firstValue + " + " + secondValue + " = " + result);
+    }
+
+    private int getIntFromUser(String prompt, Scanner userInputScanner){
+        System.out.println(prompt);
+        String intValueStr = userInputScanner.nextLine();
+        int intValue = Integer.parseInt(intValueStr);
+        System.out.println("You entered " + intValue);
+        System.out.println();
+
+        return intValue;
     }
 }
