@@ -1,12 +1,17 @@
 package com.techelevator.farm;
 
-public class FarmAnimal {
+import java.math.BigDecimal;
+
+public class FarmAnimal implements Singable, Sellable{
 	private String name;
 	private String sound;
+	private BigDecimal price;
 
-	public FarmAnimal(String name, String sound) {
+
+	public FarmAnimal(String name, String sound, BigDecimal price) {
 		this.name = name;
 		this.sound = sound;
+		this.price = price;
 	}
 
 	public String getName() {
@@ -17,4 +22,11 @@ public class FarmAnimal {
 		return sound;
 	}
 
+	public String getAOrAn(){
+		return "a";
+	}
+
+	public BigDecimal getPrice(){
+		return price;
+	}
 }
