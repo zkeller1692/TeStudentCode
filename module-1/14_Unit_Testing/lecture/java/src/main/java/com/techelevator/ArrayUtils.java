@@ -3,9 +3,9 @@ package com.techelevator;
 public class ArrayUtils {
 
     public static int max(int[] array) {
-        int maxFound = 0;
+        int maxFound = Integer.MIN_VALUE;
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             if (array[i] > maxFound) {
                 maxFound = array[i];
             }
