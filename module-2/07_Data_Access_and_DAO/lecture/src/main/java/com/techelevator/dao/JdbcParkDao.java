@@ -20,7 +20,6 @@ public class JdbcParkDao implements ParkDao {
     public Park getPark(long parkId) {
         return new Park();
     }
-
     @Override
     public List<Park> getParksByState(String stateAbbreviation) {
         return new ArrayList<Park>();
