@@ -26,9 +26,9 @@ CREATE TABLE group_member(
 
 CREATE TABLE event_table (
 	event_id SERIAL NOT NULL PRIMARY KEY,
-	event_name VARCHAR(100) NOT NULL,
+	event_name VARCHAR(100) NOT NULL UNIQUE,
 	description VARCHAR(500) NOT NULL,
-	duration_in_minutes INT NOT NULL,
+	duration_in_minutes INT NOT NULL CHECK(duration_in_minutes >= 30),
 	start_date TIMESTAMP NOT NULL,
 	group_id SERIAL NOT NULL CONSTRAINT fk_group REFERENCES group_table(group_id)
 );

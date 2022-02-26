@@ -1,43 +1,44 @@
 Bug 1
 -----
 Test that demonstrates problem:
-
+getTimesheetsByEmployeeId_returns_list_of_all_timesheets_for_employee
 Expected output:
-
+timesheets.size = 2
 Actual output:
-
+timesheets.size = 1
 How did you fix this bug?
-
+I changed the if loop in the getTimesheetsByEmployeeId to a while loop.
 
 Bug 2
 -----
 Test that demonstrates problem:
-
+getTimesheetsByEmployeeId_returns_list_of_all_timesheets_for_employee
 Expected output:
-
+timesheets.size = 3
 Actual output:
-
+timesheets.size = 2
 How did you fix this bug?
-
+I corrected the sql string in the getTimeSheetsByEmployeeId method in the DOA. The WHERE statement was originally looking
+for the employee Id not the project Id.
 
 Bug 3
 -----
 Test that demonstrates problem:
-
+updated_timesheet_has_expected_values_when_retrieved
 Expected output:
-
+Billable hours = true
 Actual output:
-
+Billable hours = false
 How did you fix this bug?
-
+I added billable to the updateTimesheet method in the DAO in both the sql string and the JDBC template.
 
 Bug 4
 -----
 Test that demonstrates problem:
-
+getBillableHours_returns_correct_total
 Expected output:
-
+getBillableHours = 0
 Actual output:
-
+getBillableHours = 2
 How did you fix this bug?
-
+I added billable to the getBillableHours method in the DAO in the sql string and set it to true so the method only returns results when true.
