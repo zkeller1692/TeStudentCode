@@ -1,0 +1,29 @@
+div.container{
+    display: grid;
+    grid-template-areas: 
+        "banner banner banner"
+      "links main events" "copyrights copyrights copyrights";
+    gap: 10px;  
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+}
+
+header{
+    grid-area: banner;
+}
+
+#menu-nav{
+    grid-area: links;
+}
+
+main{
+    grid-area: main;
+}
+
+#upcoming-events{
+    grid-area: events;
+}
+
+footer{
+    grid-area: copyrights;
+}
