@@ -50,3 +50,107 @@ header img {
 #student-picture img{
     border-radius: 50%;
 }
+
+main#main-grid{
+    display: grid;
+    grid-template-areas:
+    "headline     headline     picture "
+    "quote        quote        picture"
+    "profile      profile      contact"
+    "experience   experience   experience";
+    grid-template-columns: 341px 341px 341px;
+    column-gap: 50px;
+    row-gap: 20px;
+    align-items: center;
+}
+
+#headline{
+    grid-area: headline;
+}
+
+#student-picture{
+    grid-area: picture;
+    margin: auto;
+}
+
+#student-quote{
+    grid-area: quote;
+}
+
+#student-profile{
+    grid-area: profile;
+}
+
+#student-contact{
+    grid-area: contact;
+    margin: auto;
+}
+
+div#experience-grid{
+    display: grid;
+    grid-area: experience;
+    grid-template-areas: 
+    "code code"
+    "data data"
+    "web  design";
+    grid-template-columns: 512px 512px;
+    row-gap: 20px;
+    column-gap: 50px;
+}
+
+#experience-code{
+    grid-area: code;
+}
+
+#experience-database{
+    grid-area: data;
+}
+
+#experience-web{
+    grid-area: web;
+}
+
+#experience-design{
+    grid-area: design;
+}
+
+@media only screen and (max-width: 1024px){
+    main#main-grid {
+        grid-template-areas: 
+        "headline    headline"
+        "quote       picture"
+        "quote       contact"
+        "profile     profile"
+        "experience  experience";
+        row-gap: 20px;
+        column-gap: 35px;
+        grid-template-columns: 400px 400px;
+    }
+    div#experience-grid{
+        grid-template-areas: 
+        "code web"
+        "data design";
+        row-gap: 20px;
+        column-gap: 20px;
+        grid-template-columns: 400px 400px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    main#main-grid{
+        grid-template-areas: 
+        "headline"
+        "picture"
+        "contact"
+        "quote"
+        "profile"
+        "experience";
+    }
+    div#experience-grid{
+        grid-template-areas: 
+        "code"
+        "web"
+        "data"
+        "design";
+    }
+}
