@@ -70,8 +70,7 @@ main#main-grid{
 
 #student-picture{
     grid-area: picture;
-    margin-left: auto;
-    margin-right: auto;
+    justify-self: center;
 }
 
 #student-quote{
@@ -84,8 +83,7 @@ main#main-grid{
 
 #student-contact{
     grid-area: contact;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
 }
 
 div#experience-grid{
