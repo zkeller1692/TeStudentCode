@@ -10,6 +10,9 @@
  */
 function variables() {
   // Declares a variable where the value cannot be changed
+  const PI = 3.15159;
+  let greeting = 'Hello';
+  greeting = "Hey";
   // Declares a variable those value can be changed
   // Declares a variable that will always be an array
 }
@@ -24,6 +27,8 @@ function printParameters(param1, param2) {
   console.log(`The value of param1 is ${param1}`);
   console.log(`The value of param2 is ${param2}`);
 }
+
+//printParameters('Runs', 'when read')
 
 /**
  * Compares two values x and y.

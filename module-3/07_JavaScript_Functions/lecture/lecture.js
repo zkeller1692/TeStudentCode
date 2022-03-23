@@ -27,6 +27,9 @@ function printToConsole(value) {
  * @param {number} firstParameter the first parameter to multiply
  * @param {number} secondParameter the second parameter to multiply
  */
+function multiplyTogether(firstParameter, secondParameter){
+  return(firstParameter * secondParameter);
+}
 
 /**
  * This version makes sure that no parameters are ever missing. If
@@ -38,7 +41,9 @@ function printToConsole(value) {
  * @param {number} [firstParameter=0] the first parameter to multiply
  * @param {number} [secondParameter=0] the second parameter to multiply
  */
-
+function multiplyNoUndefined(firstParameter = 0, secondParameter = 0){
+  return firstParameter * secondParameter;
+}
 
  
 /**
@@ -92,6 +97,21 @@ function createSentenceFromUser(name, age, listOfQuirks = [], separator = ', ') 
   return description + listOfQuirks.join(separator);
 }
 
+function printValue(value, index, origArray){
+console.log(`In printValue at index ${index} value ${value} or array ${origArray}`);
+}
+
+function printAllValues(arrToPrint){
+  arrToPrint.forEach(printValue)
+}
+
+function printAllValuesV2(arrToPrint){
+  arrToPrint.forEach((value) => {
+    console.log(value);
+  });
+}
+
+
 /**
  * Takes an array and, using the power of anonymous functions, generates
  * their sum.
@@ -99,6 +119,8 @@ function createSentenceFromUser(name, age, listOfQuirks = [], separator = ', ') 
  * @param {number[]} numbersToSum numbers to add up
  * @returns {number} sum of all the numbers
  */
+
+
 function sumAllNumbers(numbersToSum) {
   return numbersToSum.reduce();
 }
@@ -111,4 +133,9 @@ function sumAllNumbers(numbersToSum) {
  * @returns {number[]} a new array with only those numbers that are
  *   multiples of 3
  */
-function allDivisibleByThree(numbersToFilter) {}
+function allDivisibleByThree(numbersToFilter) {
+
+  return numbersToFilter.filter((value) => {
+    return value % 3 === 0;
+  });
+}
