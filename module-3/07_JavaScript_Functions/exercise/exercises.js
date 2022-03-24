@@ -19,6 +19,12 @@
  * @param {boolean} [recommendation=false] does the student have a recommendation
  * @returns {boolean} true if they are admitted
  */
+function isAdmitted(gpa, satScore, recommendation){
+    if((gpa > 4.0 || satScore > 1300) || (gpa > 3.0 && recommendation == true)||(satScore > 1200 && recommendation==true)){
+    return true;
+}
+    return false;
+}
 
 /**
  * Write a function called useParameterToFilterArray that takes a
@@ -28,6 +34,11 @@
  * @returns {number[]} the filtered array
  */
 let unfilteredArray = [1, 2, 3, 4, 5, 6];
+function useParameterToFilterArray(filterFunction){
+    return unfilteredArray.filter((value) => {
+        return filterFunction(value);
+    });
+}
 
 /**
  * Write a function called makeNumber that takes two strings
@@ -41,6 +52,10 @@ let unfilteredArray = [1, 2, 3, 4, 5, 6];
  * @param {string} [second=''] the second string of digits to concatenate
  * @returns {number} the resultant number
  */
+    function makeNumber(first, second){
+        let string = first + second;
+        return parseInt(string)
+    }
 
 /**
  * Write a function called addAll that takes an unknown number of parameters
@@ -49,13 +64,27 @@ let unfilteredArray = [1, 2, 3, 4, 5, 6];
  * @param {...number} num a series of numbers to add together
  * @returns {number} the sum of all the parameters (or arguments)
  */
-
+    function addAll(){
+        let sum = 0;
+        for(let i = 0; i < arguments.length; i++){
+            sum += arguments[i];
+        }
+        return sum;
+    }
 /*
  * Write and document a function called makeHappy that takes
  * an array and prepends 'Happy ' to the beginning of all the
  * words and returns them as a new array. Use the `map` function.
  */
-
+/**
+ * Add the word 'Happy' before each word in the array.
+ * @param {string[]} array a series of strings
+ * @returns {string[]} as series of strings with the word 'Happy' before it.
+ */
+    function makeHappy(array){
+        let newArray = array.map((x) => 'Happy ' + x);
+        return newArray;
+    }
 /*
  * Write and document a function called getFullAddressesOfProperties
  * that takes an array of JavaScript objects. Each object contains the
@@ -73,6 +102,17 @@ let unfilteredArray = [1, 2, 3, 4, 5, 6];
  *
  * Use `map` and an anonymous function.
  */
+ /**
+  * 
+  * @param {Object[]} properties an array of objects. 
+  * @returns an array of strings from the properties passed in. 
+  */
+    function getFullAddressesOfProperties(properties){
+        let addressArray = properties.map((x) => {
+           return newString = x.streetNumber + ' ' + x.streetName + ' ' + x.streetType + ' ' + x.city + ' ' + x.state + ' ' + x.zip;
+        });
+        return addressArray;
+    }
 
 /*
  * Write and document a function called findLargest.
@@ -80,6 +120,21 @@ let unfilteredArray = [1, 2, 3, 4, 5, 6];
  * Using `forEach`, find the largest element in an array.
  * It must work for strings and numbers.
  */
+/**
+ * 
+ * @param {element[]} array 
+ * @returns largest element from that array.
+ */
+
+    function findLargest(array){
+        let largest = null;
+        array.forEach((element) =>{
+            if (largest < element){
+                largest = element;
+            } 
+        });
+        return largest;
+    }
 
 /*
  * CHALLENGE
