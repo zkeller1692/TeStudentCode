@@ -66,6 +66,14 @@ setPageDescription();
 // Display all of the product reviews on our page.
 displayReviews();
 
+let inputDesc = document.getElementById('inputDes');
+inputDesc.addEventListener('keypress', (event) =>{
+  console.log(`Got keyup of ${event.key}`);
+  if(event.key === 'Enter'){
+    exitDescriptionEdit(inputDesc, true);
+  }
+})
+
 /**
  * Hide the description and show the text box.
  *
