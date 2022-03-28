@@ -36,13 +36,6 @@ function displayGroceries() {
     ul.appendChild(li);
   });
 }
-function test(){
-  console.log('test worked');
-}
-
-// function buttonText() {
-//   markAllToggle.innerText = 'Mark All Complete'
-// }
 
 document.addEventListener('DOMContentLoaded', () => {
   setPageTitle();
