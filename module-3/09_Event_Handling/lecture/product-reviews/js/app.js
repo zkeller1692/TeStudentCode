@@ -58,13 +58,14 @@ function displayReview(review) {
 }
 
 // LECTURE STARTS HERE ---------------------------------------------------------------
-
+document.addEventListener('DOMContentLoaded', () => {
 // Set the product reviews page title.
 setPageTitle();
 // Set the product reviews page description.
 setPageDescription();
 // Display all of the product reviews on our page.
 displayReviews();
+});
 
 let inputDesc = document.getElementById('inputDes');
 inputDesc.addEventListener('keypress', (event) =>{

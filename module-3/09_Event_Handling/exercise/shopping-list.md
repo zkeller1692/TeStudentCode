@@ -48,7 +48,7 @@ npm run test
 The tests are located in `cypress/integration/shopping-list.spec.js`:
 
 * Parent container `shopping-list` should exist
-* Should have a title of My Shopping List
+* Should have a title of My Shopping Lisgift
 * Should have 10 items on the shopping list
 * Each item in the list should not have the class completed until it has been clicked on
 * Each item in the list that is completed can be double-clicked on and marked incomplete
