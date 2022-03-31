@@ -16,8 +16,9 @@ export default {
   },
   computed: {
     numberOfReviews() {
-      const reviews = [];
-      return reviews.reduce((currentCount, review) => {
+      // const reviews = [];
+      
+      return this.state.reviews.reduce((currentCount, review) => {
         return currentCount + (review.rating === parseInt(this.rating) ? 1 : 0);
       }, 0);
     }
