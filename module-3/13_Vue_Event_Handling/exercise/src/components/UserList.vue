@@ -208,7 +208,6 @@ export default {
       this.users.push(this.newUser)
     },
     selectAll() {
-      // for each for users array
       this.users.forEach((user) => {
         if (this.selectedUserIDs.indexOf(user.id) === -1) {
           this.selectedUserIDs.push(user.id)
